@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Sample",
+    "criteria": [
+      {
+        "name": "Sample",
+        "score": 1
+      },
+      {
+        "name": "Sample",
+        "score": 1
+      }
+    ],
+    "sucess": 0
+  },
+  {
+    "name": "Sample",
+    "criteria": [
+      {
+        "name": "Sample",
+        "score": 1
+      },
+      {
+        "name": "Sample",
+        "score": 1
+      }
+    ],
+    "sucess": 0
+  }
+]
