@@ -1,30 +1,72 @@
 [
   {
-    "name": "Sample",
+    "name": "bioenergia",
     "criteria": [
       {
-        "name": "Sample",
+        "name": "empreendedor e equipe",
+        "score": 0
+      },
+      {
+        "name": "viabilidade de negócio",
+        "score": 1
+      }
+    ],
+    "sucess": 1
+  },
+  {
+    "name": "mobilidade Urbana",
+    "criteria": [
+      {
+        "name": "empreendedor e equipe",
         "score": 1
       },
       {
-        "name": "Sample",
+        "name": "viabilidade de negócio",
         "score": 1
       }
     ],
     "sucess": 0
   },
   {
-    "name": "Sample",
+    "name": "segurança",
     "criteria": [
       {
-        "name": "Sample",
+        "name": "empreendedor e equipe",
         "score": 1
       },
       {
-        "name": "Sample",
-        "score": 1
+        "name": "viabilidade de negócio",
+        "score": 0
+      }
+    ],
+    "sucess": 1
+  },
+  {
+    "name": "esgoto e escoamento",
+    "criteria": [
+      {
+        "name": "empreendedor e equipe",
+        "score": 0
+      },
+      {
+        "name": "viabilidade de negócio",
+        "score": 0
       }
     ],
     "sucess": 0
+  },
+  {
+    "name": "meio ambiente",
+    "criteria": [
+      {
+        "name": "empreendedor e equipe",
+        "score": 1
+      },
+      {
+        "name": "viabilidade de negócio",
+        "score": 1
+      }
+    ],
+    "sucess": 1
   }
 ]
