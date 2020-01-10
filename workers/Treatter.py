@@ -49,7 +49,7 @@ def __treatCoefficients(coefficients: list, lowerLimit: int, higherLimit: int) -
     return treatedCoefficients
 
 
-def __relateCoefficients(features: set, coefficientMap: List[list]) -> Dict[dict, dict]:
+def __relateCoefficients(features: list, coefficientMap: List[list]) -> Dict[str, dict]:
     coefficientDict: dict = {}
 
     for (index, row) in enumerate(coefficientMap):
@@ -96,7 +96,7 @@ def createDataFrame(data: list) -> DataFrame:
     return DataFrame(preparedDict, index=index)
 
 
-def createFinalMap(coefficients: list, lowerLimit: int, higherLimit: int, features) -> Dict[dict, dict]:
+def createFinalMap(coefficients: list, lowerLimit: int, higherLimit: int, features) -> Dict[str, dict]:
     treatedCoefficitents = __treatCoefficients(
         coefficients, lowerLimit, higherLimit)
 

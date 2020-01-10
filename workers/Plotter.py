@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 __LOCAL = Path(__file__).parents[1].joinpath('output').joinpath('graphs')
 
 
-def plotMap(finalMap: Dict[dict, dict]):
+def plotMap(finalMap: Dict[str, dict]):
     for key in finalMap.keys():
         plt.title(f'Outros comparados a {key}')
         plt.ylabel(f'Peso')
