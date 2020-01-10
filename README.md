@@ -4,7 +4,6 @@ Register calls from the cimatec accelerator. The server also run a logistic regr
 
 ## Getting Started
 
-```
 After cloning this repository, create a .env file containing the mongoDB service URL and the server port.
 
 Install virtualenv using:
@@ -28,15 +27,68 @@ Install pre-requisits with pip:
 Run with:
 (Windows) **py server.py**
 (Linux) **python3 server.py**
-```
 
 ## API
 
-```
 There is only one route, '/'.
 
 GET requisition -> Returns the map, result of the logistic regression analysis on stored data and it's evaluation.
+Example response:
+```
+{
+  "classification": {
+    "0": {
+      "f1-score": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 0.0
+    },
+    "1": {
+      "f1-score": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 2.0
+    },
+    "accuracy": 0.0,
+    "macro avg": {
+      "f1-score": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 2.0
+    },
+    "weighted avg": {
+      "f1-score": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 2.0
+    }
+  },
+  "finalMap": {
+    "empreendedor e equipe": {
+      "viabilidade de negócio": -9
+    }
+  },
+  "saved": true
+}
+```
+  
 POST requisition -> Need a JSON Body (see example.JSON), stores a call in the database
+Example Body:
+```
+{
+    "name": "bioenergia",
+    "criteria": [
+      {
+        "name": "empreendedor e equipe",
+        "score": 0
+      },
+      {
+        "name": "viabilidade de negócio",
+        "score": 1
+      }
+    ],
+    "sucess": 1
+  }
 ```
 
 ## Built with
