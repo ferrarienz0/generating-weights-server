@@ -10,10 +10,10 @@ __DB = __CLIENT['cimatec']
 __COLLECTION = __DB['calls']
 
 
-def sendCallsToDatabase(document: List[dict]) -> bool:
-    result = __DB['calls'].insert_many(document, ordered=False)
+def sendCallToDatabase(document: dict) -> bool:
+    result = __DB['calls'].insert_one(document)
 
-    return result.inserted_ids != None
+    return result.inserted_id != None
 
 
 def sendProcessedWeitghsToDatabase(document: dict) -> bool:

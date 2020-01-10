@@ -18,7 +18,7 @@ class MLMap(Resource):
 
         toSend = deepcopy(data)
 
-        dbStatus: bool = Saver.sendCallsToDatabase(toSend)
+        dbStatus: bool = Saver.sendCallToDatabase(toSend)
 
         return jsonify({'data': data, 'saved': dbStatus})
 
