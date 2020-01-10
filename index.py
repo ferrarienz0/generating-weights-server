@@ -5,6 +5,7 @@ from typing import List
 from workers import Inputter
 from workers import Treatter
 from workers import Learner
+from workers import Plotter
 
 data = Inputter.readData('data.json')
 
@@ -18,4 +19,4 @@ model, classification = Learner.getModelAndClassification(
 
 finalMap = Treatter.createFinalMap(model.coef_[0], 1, 9, features)
 
-print(finalMap)
+plots: list = Plotter.plotMap(finalMap)
