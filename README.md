@@ -6,25 +6,25 @@ Register calls from the cimatec accelerator. The server also run a logistic regr
 
 After cloning this repository, create a .env file containing the mongoDB service URL and the server port.
 
-Install virtualenv using:
+Install virtualenv using: <br />
 (Windows) **py -m pip install --user virtualenv** <br />
 (Linux) **python3 -m pip install --user virtualenv**
 
-Create virtualenv using:
+Create virtualenv using: <br />
 (Windows) **py -m venv env** <br />
 (Linux) **python3 -m venv env**
 
-Active the virtualenviromment using:
+Active the virtualenviromment using: <br />
 (Windows) **.\env\Scripts\activate** <br />
 (Linux) **source env/bin/activate**
 
-Install pre-requisits with pip:
+Install pre-requisits with pip: <br />
 (Windows) **pip install -r requirements.txt** <br />
 (Linux) **pip3 install -r requirements.txt**
 
 (The version used for python was 3.6.9)
 
-Run with:
+Run with: <br />
 (Windows) **py server.py** <br />
 (Linux) **python3 server.py**
 
