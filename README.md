@@ -30,6 +30,15 @@ Run with:
 (Linux) **python3 server.py**
 ```
 
+## API
+
+```
+There is only one route, '/'.
+
+GET requisition -> Returns the map, result of the logistic regression analysis on stored data and it's evaluation.
+POST requisition -> Need a JSON Body (see example.JSON), stores a call in the database
+```
+
 ## Built with
 
 - [Python](https://www.python.org/)
