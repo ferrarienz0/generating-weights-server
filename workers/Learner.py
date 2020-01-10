@@ -29,6 +29,6 @@ def getModelAndClassification(dataframe: DataFrame, features: list, target: list
     predictions = model.predict(X_test)
 
     classification = classification_report(
-        y_test, predictions, zero_division=0)
+        y_test, predictions, zero_division=0, output_dict=True)
 
     return model, classification
