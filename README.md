@@ -7,32 +7,32 @@ Register calls from the cimatec accelerator. The server also run a logistic regr
 After cloning this repository, create a .env file containing the mongoDB service URL and the server port.
 
 Install virtualenv using:
-(Windows) **py -m pip install --user virtualenv**
+(Windows) **py -m pip install --user virtualenv** <br />
 (Linux) **python3 -m pip install --user virtualenv**
 
 Create virtualenv using:
-(Windows) **py -m venv env**
+(Windows) **py -m venv env** <br />
 (Linux) **python3 -m venv env**
 
 Active the virtualenviromment using:
-(Windows) **.\env\Scripts\activate**
+(Windows) **.\env\Scripts\activate** <br />
 (Linux) **source env/bin/activate**
 
 Install pre-requisits with pip:
-(Windows) **pip install -r requirements.txt**
+(Windows) **pip install -r requirements.txt** <br />
 (Linux) **pip3 install -r requirements.txt**
 
 (The version used for python was 3.6.9)
 
 Run with:
-(Windows) **py server.py**
+(Windows) **py server.py** <br />
 (Linux) **python3 server.py**
 
 ## API
 
 There is only one route, '/'.
 
-GET requisition -> Returns the map, result of the logistic regression analysis on stored data and it's evaluation.
+GET requisition -> Returns the map, result of the logistic regression analysis on stored data and it's evaluation. <br />
 Example response:
 ```
 {
@@ -72,7 +72,7 @@ Example response:
 }
 ```
   
-POST requisition -> Need a JSON Body (see example.JSON), stores a call in the database
+POST requisition -> Need a JSON Body (see example.JSON), stores a call in the database <br />
 Example Body:
 ```
 {
