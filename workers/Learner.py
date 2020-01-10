@@ -1,7 +1,11 @@
+# Custom imports
 from pandas import DataFrame
+
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+
+from numpy import unique
 
 
 def __getTrainedDatasets(dataframe: DataFrame, features: list, target: list) -> tuple:
@@ -24,6 +28,7 @@ def getModelAndClassification(dataframe: DataFrame, features: list, target: list
 
     predictions = model.predict(X_test)
 
-    classification = classification_report(y_test, predictions)
+    classification = classification_report(
+        y_test, predictions, zero_division=0)
 
     return model, classification

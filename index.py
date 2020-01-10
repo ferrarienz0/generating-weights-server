@@ -16,4 +16,6 @@ dataFrame = Treatter.createDataFrame(data)
 model, classification = Learner.getModelAndClassification(
     dataFrame, features, target)
 
-print(classification)
+finalMap = Treatter.createFinalMap(model.coef_[0], 1, 9, features)
+
+print(finalMap)
