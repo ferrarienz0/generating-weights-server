@@ -1,11 +1,19 @@
 # Native imports
 from typing import List
 from json import load
+from pathlib import Path
+from os import getenv
 
 # Custom imports
 from pymongo import MongoClient
+from dotenv import load_dotenv
 
-__CLIENT = MongoClient()
+__ENV_PATH = Path(__file__).parents[1] / '.env'
+
+load_dotenv(dotenv_path=__ENV_PATH)
+
+__MONGOADDRESS = getenv('MONGO_ADDRESS')
+__CLIENT = MongoClient(__MONGOADDRESS)
 __DB = __CLIENT['cimatec']
 __COLLECTION = __DB['calls']
 

@@ -1,0 +1,14 @@
+{
+  "name": "bioenergia",
+  "criteria": [
+    {
+      "name": "empreendedor e equipe",
+      "score": 0
+    },
+    {
+      "name": "viabilidade de negócio",
+      "score": 1
+    }
+  ],
+  "sucess": 1
+}
