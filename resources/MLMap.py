@@ -25,6 +25,9 @@ class MLMap(Resource):
     def get(self):
         data = Saver.getFromDB('calls')
 
+        if len(data) == 0 or data == None:
+            return jsonify({'message': 'There is no call stored yet, ML process cannot run'})
+
         finalMap, classification = runProcess(data)
 
         response: dict = {'finalMap': finalMap,
