@@ -14,7 +14,7 @@ Create virtualenv using: <br />
 (Windows) **py -m venv env** <br />
 (Linux) **python3 -m venv env**
 
-Active the virtualenviromment using: <br />
+Activate the virtualenviromment using: <br />
 (Windows) **.\env\Scripts\activate** <br />
 (Linux) **source env/bin/activate**
 
