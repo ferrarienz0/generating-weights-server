@@ -30,7 +30,7 @@ class MLMap(Resource):
 
         finalMap, classification = runProcess(data)
 
-        response: dict = {'finalMap': finalMap,
+        response: dict = {'result': finalMap,
                           'classification': classification}
 
         document = deepcopy(response)

@@ -1,5 +1,6 @@
 {
   "name": "bioenergia",
+  "company": "some startup",
   "criteria": [
     {
       "name": "empreendedor e equipe",
@@ -10,5 +11,5 @@
       "score": 1
     }
   ],
-  "sucess": 1
+  "success": 1
 }

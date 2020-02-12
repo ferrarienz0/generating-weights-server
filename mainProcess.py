@@ -9,11 +9,11 @@ from workers import Learner
 from workers import Plotter
 
 from pandas import DataFrame
-
+ 
 
 def runProcess(data: dict) -> tuple:
     features = Treatter.getFeatures(data)
-    target = 'sucess'
+    target = 'success'
 
     dataFrame = Treatter.createDataFrame(data)
 

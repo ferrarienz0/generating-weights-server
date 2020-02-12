@@ -64,7 +64,7 @@ Example response:
       "support": 2.0
     }
   },
-  "finalMap": {
+  "result": {
     "empreendedor e equipe": {
       "viabilidade de negócio": -9
     }
@@ -79,6 +79,7 @@ Example Body:
 ```
 {
     "name": "bioenergia",
+    "company": "some startup",
     "criteria": [
       {
         "name": "empreendedor e equipe",
@@ -89,7 +90,7 @@ Example Body:
         "score": 1
       }
     ],
-    "sucess": 1
+    "success": 1
   }
 ```
 
