@@ -7,17 +7,21 @@ import matplotlib.pyplot as plt
 
 __LOCAL = Path(__file__).parents[1].joinpath('output').joinpath('graphs')
 
+# Plota os gráficos de comparação
+# e os salva localmente
+
 
 def plotMap(finalMap: Dict[str, dict]):
     for key in finalMap.keys():
+        plt.figure(figsize=(len(finalMap[key]) * 4, 10))
         plt.title(f'Outros comparados a {key}')
         plt.ylabel(f'Peso')
         plt.xlabel(f'Critérios')
 
         ticks: list = []
 
-        for key_ in finalMap[key]:
-            plt.plot(finalMap[key][key_], 'o')
+        for index, key_ in enumerate(finalMap[key]):
+            plt.plot(index, finalMap[key][key_], 'o')
             ticks.append(key_)
 
         # Graph style

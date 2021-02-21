@@ -17,6 +17,9 @@ __CLIENT = MongoClient(__MONGOADDRESS)
 __DB = __CLIENT['cimatec']
 __COLLECTION = __DB['calls']
 
+# Classe de integração ao banco de dados
+# atualmente implementado em MongoDB
+
 
 def sendCallToDatabase(document: dict) -> bool:
     result = __DB['calls'].insert_one(document)

@@ -5,6 +5,10 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
+# Aqui são gerados os datasets de treino
+# para realizar o fit no modelo de machine
+# learning.
+
 
 def __getTrainedDatasets(dataframe: DataFrame, features: list, target: list) -> tuple:
     X = dataframe[features]
@@ -14,6 +18,12 @@ def __getTrainedDatasets(dataframe: DataFrame, features: list, target: list) -> 
         X, y, test_size=0.3, random_state=101)
 
     return X_train, X_test, y_train, y_test
+
+# Aqui é criado o modelo de regressão logística
+# e ajustado de acordo com os dados de teste e
+# treinamento. A predição gerada nesse passo
+# é utilizada para gerar as informações de
+# fitting, etc.
 
 
 def getModelAndClassification(dataframe: DataFrame, features: list, target: list) -> tuple:

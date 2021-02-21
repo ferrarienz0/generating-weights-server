@@ -13,6 +13,9 @@ from workers import Saver
 
 
 class MLMap(Resource):
+    # Função que é chamada quando uma requisição
+    # POST é feita. Os dados são salvos no banco
+    # de dados para posterior análise.
     def post(self):
         data = request.get_json(force=True)
 
@@ -22,6 +25,10 @@ class MLMap(Resource):
 
         return jsonify({'data': data, 'saved': dbStatus})
 
+    # Função que é chamada quando uma requisição
+    # GET é feita. Aqui é puxado o histórico do
+    # banco de dados para executar o processo de
+    # geração de pesos
     def get(self):
         data = Saver.getFromDB('calls')
 

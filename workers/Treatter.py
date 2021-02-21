@@ -28,6 +28,10 @@ def __prepareDict(data: list) -> list:
 
     return data
 
+# Aqui os coeficientes são tratados para se adequar ao range especificado
+# A regressão logarítmica pode retornar ranges diversos, e portanto, é
+# necessário colocá-los no especificado.
+
 
 def __treatCoefficients(coefficients: list, lowerLimit: int, higherLimit: int) -> list:
     sortedCoefficients = sorted(coefficients)
@@ -48,6 +52,9 @@ def __treatCoefficients(coefficients: list, lowerLimit: int, higherLimit: int) -
 
     return treatedCoefficients
 
+# Aqui é feita a etapa de relação das features
+# com os pesos encontrados
+
 
 def __relateCoefficients(features: list, coefficientMap: List[list]) -> Dict[str, dict]:
     coefficientDict: dict = {}
@@ -56,11 +63,17 @@ def __relateCoefficients(features: list, coefficientMap: List[list]) -> Dict[str
         rowDict: dict = {}
 
         for (index_, column) in enumerate(row):
-            rowDict[features[len(row) + index_]] = column
+            relatedFeature = features[index_ + index + 1]
+
+            rowDict[relatedFeature] = column
 
         coefficientDict[features[index]] = rowDict
 
     return coefficientDict
+
+# Aqui os coeficientes são relacionados
+# por distância, para se encontrarem
+# no range de -9 a 9.
 
 
 def __generateCoefficientMap(coefficients: list) -> List[list]:
@@ -94,6 +107,9 @@ def createDataFrame(data: list) -> DataFrame:
         del x['name']
 
     return DataFrame(preparedDict, index=index)
+
+# O objeto final é retornado contendo a relação das
+# features com os pesos de outros critérios.
 
 
 def createFinalMap(coefficients: list, lowerLimit: int, higherLimit: int, features) -> Dict[str, dict]:
