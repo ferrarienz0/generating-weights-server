@@ -13,7 +13,7 @@ __LOCAL = Path(__file__).parents[1].joinpath('output').joinpath('graphs')
 
 def plotMap(finalMap: Dict[str, dict]):
     for key in finalMap.keys():
-        plt.figure(figsize=(len(finalMap[key]) * 4, 10))
+        plt.figure(figsize=(3 + len(finalMap[key]) * 1.35, 7))
         plt.title(f'Outros comparados a {key}')
         plt.ylabel(f'Peso')
         plt.xlabel(f'Critérios')
@@ -22,7 +22,7 @@ def plotMap(finalMap: Dict[str, dict]):
 
         for index, key_ in enumerate(finalMap[key]):
             plt.plot(index, finalMap[key][key_], 'o')
-            ticks.append(key_)
+            ticks.append(key_.replace(' ', '\n', 1))
 
         # Graph style
         plt.grid(color='gray', linestyle='-', linewidth=1)
